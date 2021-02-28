@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_tasks"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_marginTop="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_tasks"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_this_week_task"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_modules"
+                android:layout_margin="5dp"
+                android:textColor="@color/red"
+                android:text="This week Tasks"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_next_week_tasks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:textColor="@color/blue"
+                android:text="Next week Tasks"
+                android:background="@drawable/button_modules"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@+id/buttons"
+            android:id="@+id/tasks_title"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:id="@+id/button_add_task"
+                android:src="@drawable/ic_add_black_24dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tasks_title"
+            android:id="@+id/tasks_recyclerview"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/courses_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+    <!--<RelativeLayout-->
+    <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:orientation="vertical"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".MainActivity"-->
+    <!--    >-->
+
+    <!--    <include-->
+    <!--        layout="@layout/toolbar"-->
+    <!--        android:id="@+id/toolbar_courses"/>-->
+
+
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/editTextNewCourse"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:ems="10"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:layout_margin="10dp"-->
+    <!--        android:layout_below="@+id/toolbar_courses"-->
+    <!--        android:inputType="textPersonName"-->
+    <!--        android:hint="Enter new course" />-->
+
+    <!--    <Button-->
+    <!--        android:layout_margin="10dp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/editTextNewCourse"-->
+    <!--        android:id="@+id/buttonAddCourse"-->
+    <!--        android:text="Add field of Study"/>-->
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/text_view_courses_available"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Courses available on database"-->
+    <!--        android:layout_below="@+id/buttonAddCourse"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:textAppearance="@style/TextAppearance.AppCompat.Large" />-->
+
+    <!-- <androidx.recyclerview.widget.RecyclerView-->
+    <!--     android:layout_width="match_parent"-->
+    <!--     android:layout_height="wrap_content"-->
+    <!--     android:id="@+id/courses_recyclerView"-->
+    <!--     android:layout_marginTop="6dp"-->
+    <!--     android:layout_below="@+id/text_view_courses_available"/>-->
+
+
+
+
+
+    <!--</RelativeLayout>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    tools:context=".AddTaskActivity">-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewModuleName"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:textAlignment="center"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:text="Module name" />-->
+
+<!--    <EditText-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:id="@+id/editTextTask_instruction"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:layout_below="@+id/textViewModuleName"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:hint="Enter task instruction"-->
+<!--        />-->
+
+<!--    <Spinner-->
+<!--        android:id="@+id/spinnerTaskDay"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/editTextTask_instruction"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:entries="@array/taskDays" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextTask_DueTime"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:layout_below="@+id/spinnerTaskDay"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:hint="Due time" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonTask_addTask"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/editTextTask_DueTime"-->
+<!--        android:text="Add task"-->
+<!--        android:layout_margin="10dp"/>-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/task_recyclerView"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_below="@+id/buttonTask_addTask"/>-->
+
+<!--</RelativeLayout>-->

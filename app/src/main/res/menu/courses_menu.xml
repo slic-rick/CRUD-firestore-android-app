@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/course_one"
+            android:icon="@drawable/ic_folder"
+            android:title="Computing and Informatics" />
+
+        <item
+            android:id="@+id/course_two"
+            android:icon="@drawable/ic_folder"
+            android:title="Engineering Sciences" />
+
+        <item
+            android:id="@+id/course_three"
+            android:icon="@drawable/ic_folder"
+            android:title="Health and Applied Sciences " />
+
+        <item
+            android:id="@+id/course_four"
+            android:icon="@drawable/ic_folder"
+            android:title="Human Sciences" />
+
+        <item
+            android:id="@+id/course_five"
+            android:icon="@drawable/ic_folder"
+            android:title="Management Sciences" />
+
+        <item
+            android:id="@+id/course_six"
+            android:icon="@drawable/ic_folder"
+            android:title="Natural Resources and Spatial Sciences " />
+    </group>
+
+</menu>
